@@ -1,8 +1,8 @@
-##Algorithm 2019 HW2 : Quick sort, insertion sort and Mix
+## Algorithm 2019 HW2 : Quick sort, insertion sort and Mix
 
 ------
 
-###HW Description
+### HW Description
 
 1. Use C or C++ to implement an insertion sorting algorithm that accepts an input file with the first line indicating the number of keys to be sorted, followed by the list of keys with one line for each key. The algorithm should generate an output file with the number of keys sorted in the first line, followed by the sorted keys with one key in each line.
 2. Write a quicksort program in C with the same input/output formats as those in Problem 1.
