@@ -19,13 +19,13 @@ all:
 	$(PRE)
 	$(CC) -o $(QUICK) $(CXXFLAGS) $(QUICK).cpp
 	$(CC) -o $(INSERT) $(CXXFLAGS) $(INSERT).cpp
-	$(CC) -o $(INSERT) $(CXXFLAGS) $(MIX).cpp
+	$(CC) -o $(MIX) $(CXXFLAGS) $(MIX).cpp
 
 debug:
 	$(PRE)
 	$(CC) -o $(QUICK) $(CXXFLAGS) -g $(QUICK).cpp
 	$(CC) -o $(INSERT) $(CXXFLAGS) -g $(INSERT).cpp
-	$(CC) -o $(INSERT) $(CXXFLAGS) -g $(MIX).cpp
+	$(CC) -o $(MIX) $(CXXFLAGS) -g $(MIX).cpp
 
 style: $(SOURCES:.cpp=.astyle-check-stamp)
 	$(PRE)
