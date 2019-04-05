@@ -11,7 +11,7 @@ using namespace std;
 void print(vector<int> &in); // print whole vector. Using for testing
 void quick_sort(vector<int> &in, int p, int r);
 int partition(vector<int> &in, int p, int r);
-void insert_sort(vector<int> &in);
+void insert_sort(vector<int> &in, int p, int r);
 
 int main(int argc, char const *argv[])
 {
@@ -127,9 +127,9 @@ int partition(vector<int> &in, int p, int r)
     return i+1;
 }
 
-void insert_sort(vector<int> &in)
+void insert_sort(vector<int> &in, int p, int r)
 {
-    for(int i = 1; i < (int)in.size(); i++) {
+    for(int i = p; i < r; i++) {
         int key = in[i];
 
         // insert target into queue
