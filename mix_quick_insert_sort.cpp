@@ -13,6 +13,8 @@ void quick_sort(vector<int> &in, int p, int r);
 int partition(vector<int> &in, int p, int r);
 void insert_sort(vector<int> &in, int p, int r);
 
+int k;
+
 int main(int argc, char const *argv[])
 {
     // init variable------------------------------------------------------------------------------
@@ -21,6 +23,13 @@ int main(int argc, char const *argv[])
     int size, buffer;
     vector<int> data;
     // clock_t start, end;
+
+    if(argc != 2){
+        cout << "Usage: ./mix_quick_insert_sort\n";
+        return 1;
+    }
+
+    k = atoi(argv[1]);
 
     // open files ---------------------------------------------------------------------------------
     fin.open("input");
@@ -99,8 +108,18 @@ void quick_sort(vector<int> &in, int p, int r)
 {
     if(p < r) {
         int q = partition(in, p, r);
-        quick_sort(in, p, q-1);
-        quick_sort(in, q+1, r);
+        if(k > (q-p-2)){
+            quick_sort(in, p, q-1);
+        }
+        else{
+            insert_sort(in, p, q-1);
+        }
+        if(k > (r-q-2)){
+            quick_sort(in, q+1, r);
+        }
+        else{
+            quick_sort(in, q+1, r);
+        }
     }
 }
 
